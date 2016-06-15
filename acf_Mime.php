@@ -1,4 +1,5 @@
 <?php
+//Need to remove this file
 if ( ! function_exists( "acf_rmf_create_options" ) ) {
 	add_action( "acf/create_field_options/type=relationship", "acf_rmf_create_options", 11, 1);
 
