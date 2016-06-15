@@ -94,6 +94,7 @@ class Acf_Rmf {
 	 */
 	private function load_dependencies() {
 
+		add_action( 'admin_init', array( $this, 'acf_rmf_plugin_has_parent_plugin' ) );
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
@@ -108,6 +109,55 @@ class Acf_Rmf {
 
 		$this->loader = new Acf_Rmf_Loader();
 
+	}
+
+	/**
+	 * Load the required dependencies for this plugin.
+	 *
+	 * Include the following files that make up the plugin:
+	 *
+	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
+	 * - Plugin_Name_i18n. Defines internationalization functionality.
+	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
+	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 *
+	 * Create an instance of the loader which will be used to register the hooks
+	 * with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	public function acf_rmf_plugin_has_parent_plugin() {
+		if ( is_admin() && current_user_can( 'activate_plugins' ) &&  !is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
+			add_action( 'admin_notices', array( $this, 'acf_rmf_plugin_notice' ) );
+
+			deactivate_plugins( plugin_dir_path( dirname( __FILE__ ) )."acf-relationship-mime-filter.php" );
+
+			if ( isset( $_GET['activate'] ) ) {
+				unset( $_GET['activate'] );
+			}
+		}
+	}
+
+
+	/**
+	 * Load the required dependencies for this plugin.
+	 *
+	 * Include the following files that make up the plugin:
+	 *
+	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
+	 * - Plugin_Name_i18n. Defines internationalization functionality.
+	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
+	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 *
+	 * Create an instance of the loader which will be used to register the hooks
+	 * with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	public function acf_rmf_plugin_notice() {
+		echo '<div class="error"><p>Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the <a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">ACF Plugin</a> to be installed and active. <br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">Install ACF Plugin</a></p></div>';
 	}
 
 	/**
