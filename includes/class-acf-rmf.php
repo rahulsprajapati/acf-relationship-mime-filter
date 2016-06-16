@@ -106,7 +106,6 @@ class Acf_Rmf {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-acf-rmf-admin.php';
 
-
 		$this->loader = new Acf_Rmf_Loader();
 
 	}
@@ -128,10 +127,10 @@ class Acf_Rmf {
 	 * @access   private
 	 */
 	public function acf_rmf_plugin_has_parent_plugin() {
-		if ( is_admin() && current_user_can( 'activate_plugins' ) &&  !is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
+		if ( is_admin() && current_user_can( 'activate_plugins' ) && ! is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
 			add_action( 'admin_notices', array( $this, 'acf_rmf_plugin_notice' ) );
 
-			deactivate_plugins( plugin_dir_path( dirname( __FILE__ ) )."acf-relationship-mime-filter.php" );
+			deactivate_plugins( plugin_dir_path( dirname( __FILE__ ) ) . 'acf-relationship-mime-filter.php' );
 
 			if ( isset( $_GET['activate'] ) ) {
 				unset( $_GET['activate'] );
@@ -215,5 +214,4 @@ class Acf_Rmf {
 	public function get_version() {
 		return $this->version;
 	}
-
 }

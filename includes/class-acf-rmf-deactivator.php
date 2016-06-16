@@ -32,5 +32,4 @@ class Acf_Rmf_Deactivator {
 	public static function deactivate() {
 
 	}
-
 }
