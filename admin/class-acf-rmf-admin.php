@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       http://rahulprajapati.me
+ * @link       https://profiles.wordpress.org/rahulsprajapati/profile/
  * @since      1.0.0
  *
  * @package    acf_rmf
@@ -12,9 +12,6 @@
 
 /**
  * The admin-specific functionality of the plugin.
- *
- * Defines the plugin name, version, and two examples hooks for how to
- * enqueue the admin-specific stylesheet and JavaScript.
  *
  * @package    acf_rmf
  * @subpackage acf_rmf/admin
@@ -41,11 +38,14 @@ class Acf_Rmf_Admin {
 	private $version;
 
 	/**
-	 * Initialize the class and set its properties.
+	 * Initialize the class, set its properties,
+	 * action to add mime type filter in acf relationship field option
+	 * and filter to post query for mime types selected in relationship metabox.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of this plugin.
-	 * @param      string    $version    The version of this plugin.
+	 * @param    string    $plugin_name       The name of this plugin.
+	 * @param    string    $version           The version of this plugin.
+	 *
 	 */
 	public function __construct( $plugin_name, $version ) {
 
@@ -58,34 +58,36 @@ class Acf_Rmf_Admin {
 	}
 
 	/**
+	 * callback function for action "acf/create_field_options/type=relationship"
+	 *
 	 * Adding mime type filter option in ACF relationship field
 	 *
 	 * @since    1.0.0
 	 */
 	public function acf_rmf_create_options( $field ) {
-		$all_mimes          = get_allowed_mime_types();
-		$key = $field['name'];
-		$choices = array(
-			'all'	=> __( 'All','acf' ),
+		$all_mimes = get_allowed_mime_types();
+		$key       = $field['name'];
+		$choices   = array(
+			'all' => __( 'All', 'acf' ),
 		);
 		foreach ( $all_mimes as $mime ) {
-			$choices[ $mime ] = __( $mime, 'acf' );
+			$choices[ $mime ] = $mime;
 		}
 		?>
 		<tr class="field_option field_option_mime_types">
 			<td class="label">
-				<label><?php _e( 'MIME types','acf' ); ?></label>
-				<p><?php _e( 'Specify mime type.','acf' ) ?></p>
+				<label><?php _e( 'MIME types', 'acf' ); ?></label>
+				<p><?php _e( 'Specify mime type.', 'acf' ) ?></p>
 			</td>
 			<td>
 				<?php
-				do_action('acf/create_field', array(
-					'type'	=> 'select',
-					'name'	=> 'fields[' . $key . '][post_mime_type]',
-					'value'	=> $field['post_mime_type'],
-					'choices' => $choices,
-					'multiple'	=> 1,
-				));
+					do_action( 'acf/create_field', array(
+						'type'     => 'select',
+						'name'     => 'fields[' . $key . '][post_mime_type]',
+						'value'    => $field['post_mime_type'],
+						'choices'  => $choices,
+						'multiple' => 1,
+					) );
 				?>
 			</td>
 		</tr>
@@ -93,37 +95,21 @@ class Acf_Rmf_Admin {
 	}
 
 	/**
+	 * callback function for filter "acf/fields/relationship/query"
+	 *
 	 * Add "post_mime_type" property in WP_Query args if mime types are selected.
 	 *
 	 * @since    1.0.0
 	 */
 	public function acf_rmf_query_post_args( $options, $field, $the_post ) {
-		if ( $options['post_type'] == 'attachment' ) {
+		if ( 'attachment' == $options['post_type'] ) {
 			if ( ! empty( $field['post_mime_type'] ) ) {
 				$mime_type = $field['post_mime_type'];
-				if ( $mime_type[0] != 'all' ) {
+				if ( 'all' != $mime_type[0] ) {
 					$options['post_mime_type'] = $mime_type;
 				}
 			}
 		}
 		return $options;
-	}
-
-	/**
-	 * Register the stylesheets for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
-
-	}
-
-	/**
-	 * Register the JavaScript for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
 	}
 }

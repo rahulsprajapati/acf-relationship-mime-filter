@@ -1,7 +1,9 @@
 <?php
 
 /**
- * @link              http://rahulprajapati.me
+ * Fired when the plugin is uninstalled.
+ *
+ * @link              https://profiles.wordpress.org/rahulsprajapati/profile/
  * @since             1.0.0
  * @package           acf_rmf
  */

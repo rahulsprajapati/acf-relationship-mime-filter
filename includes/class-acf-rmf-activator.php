@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       https://profiles.wordpress.org/rahulsprajapati/profile/
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    acf_rmf
+ * @subpackage acf_rmf/includes
  */
 
 /**
@@ -23,9 +23,7 @@
 class Acf_Rmf_Activator {
 
 	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
+	 * Plugin Activation
 	 *
 	 * @since    1.0.0
 	 */

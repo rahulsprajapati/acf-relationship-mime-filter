@@ -1,12 +1,12 @@
 <?php
 /**
- * @link              http://rahulprajapati.me
+ * @link              https://profiles.wordpress.org/rahulsprajapati/profile/
  * @since             1.0.0
  * @package           acf_rmf
  *
  * @wordpress-plugin
  * Plugin Name:       Advanced Custom Fields - Relationship MIME type filter
- * Plugin URI:        http://rahulprajapati.me
+ * Plugin URI:        https://profiles.wordpress.org/rahulsprajapati/profile/
  * Description:       This plugin is an add-on for Advanced Custom Fields. It allows you to use "post_mime_type" filter in "relationship" field.
  * Version:           1.0.0
  * Author:            Rahul Prajapati
@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-plugin-name-activator.php
+ * This action is documented in includes/class-acf-rmf-activator.php
  */
 function activate_acf_rmf() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-acf-rmf-activator.php';
@@ -33,7 +33,7 @@ function activate_acf_rmf() {
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-plugin-name-deactivator.php
+ * This action is documented in includes/class-acf-rmf-deactivator.php
  */
 function deactivate_acf_rmf() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-acf-rmf-deactivator.php';

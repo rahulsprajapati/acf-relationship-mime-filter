@@ -41,5 +41,5 @@ If this plugin helps you, please give it a good rating. If you have any problems
 == Changelog ==
 
 = 1.0 =
-* Initial Commit.
+* Added "post_mime_type" filter in "relationship" field.
 

@@ -1,16 +1,16 @@
 <?php
 
 /**
- * The file that defines the core plugin class
+ * This file defines the core plugin class
  *
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
+ * @link       https://profiles.wordpress.org/rahulsprajapati/profile/
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    acf_rmf
+ * @subpackage acf_rmf/includes
  */
 
 /**
@@ -25,7 +25,7 @@
  * @since      1.0.0
  * @package    acf_rmf
  * @subpackage acf_rmf/includes
- * @author     Your Name <email@example.com>
+ * @author     Rahul Prajapati <rahul.prajapati@live.in>
  */
 class Acf_Rmf {
 
@@ -68,7 +68,7 @@ class Acf_Rmf {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'acf-rmf';
+		$this->plugin_name = 'advanced-custom-fields-relationship-mime-filter';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
@@ -81,10 +81,9 @@ class Acf_Rmf {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
+	 * - Acf_Rmf_Loader. Orchestrates the hooks of the plugin.
+	 * - Acf_Rmf_i18n. Defines internationalization functionality.
+	 * - Acf_Rmf_Admin. Defines all hooks for the admin area.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -111,23 +110,15 @@ class Acf_Rmf {
 	}
 
 	/**
-	 * Load the required dependencies for this plugin.
-	 *
-	 * Include the following files that make up the plugin:
-	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
-	 *
-	 * Create an instance of the loader which will be used to register the hooks
-	 * with WordPress.
+	 * Check If parent ACF plugin is installed or not.
+	 * And do not activate our plugin if ACF is not active.
 	 *
 	 * @since    1.0.0
 	 * @access   private
 	 */
 	public function acf_rmf_plugin_has_parent_plugin() {
 		if ( is_admin() && current_user_can( 'activate_plugins' ) && ! is_plugin_active( 'advanced-custom-fields/acf.php' ) ) {
+
 			add_action( 'admin_notices', array( $this, 'acf_rmf_plugin_notice' ) );
 
 			deactivate_plugins( plugin_dir_path( dirname( __FILE__ ) ) . 'acf-relationship-mime-filter.php' );
@@ -140,23 +131,13 @@ class Acf_Rmf {
 
 
 	/**
-	 * Load the required dependencies for this plugin.
-	 *
-	 * Include the following files that make up the plugin:
-	 *
-	 * - Plugin_Name_Loader. Orchestrates the hooks of the plugin.
-	 * - Plugin_Name_i18n. Defines internationalization functionality.
-	 * - Plugin_Name_Admin. Defines all hooks for the admin area.
-	 * - Plugin_Name_Public. Defines all hooks for the public side of the site.
-	 *
-	 * Create an instance of the loader which will be used to register the hooks
-	 * with WordPress.
+	 * admin_notices callback function for parent plugin required notice.
 	 *
 	 * @since    1.0.0
 	 * @access   private
 	 */
 	public function acf_rmf_plugin_notice() {
-		echo '<div class="error"><p>Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the <a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">ACF Plugin</a> to be installed and active. <br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">Install ACF Plugin</a></p></div>';
+		echo '<div class="error"><p>' . __( 'Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the', 'acf' ) . '<a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">' . __( 'ACF Plugin', 'acf' ) . '</a>' . __( 'to be installed and active.', 'acf' ) . '<br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">' . __( 'Install ACF Plugin', 'acf' ) . '</a></p></div>';
 	}
 
 	/**
@@ -199,7 +180,7 @@ class Acf_Rmf {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Plugin_Name_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Acf_Rmf_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;
