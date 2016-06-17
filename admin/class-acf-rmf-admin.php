@@ -68,7 +68,7 @@ class Acf_Rmf_Admin {
 		$all_mimes = get_allowed_mime_types();
 		$key       = $field['name'];
 		$choices   = array(
-			'all' => __( 'All', 'acf' ),
+			'all' => __( 'All', 'acf-rmf' ),
 		);
 		foreach ( $all_mimes as $mime ) {
 			$choices[ $mime ] = $mime;
@@ -76,8 +76,8 @@ class Acf_Rmf_Admin {
 		?>
 		<tr class="field_option field_option_mime_types">
 			<td class="label">
-				<label><?php _e( 'MIME types', 'acf' ); ?></label>
-				<p><?php _e( 'Specify mime type.', 'acf' ) ?></p>
+				<label><?php _e( 'MIME types', 'acf-rmf' ); ?></label>
+				<p><?php _e( 'Specify mime type.', 'acf-rmf' ) ?></p>
 			</td>
 			<td>
 				<?php

@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: acf-rmf\n"
+"POT-Creation-Date: 2016-06-18 02:59+0530\n"
+"PO-Revision-Date: 2016-06-18 02:59+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/rahul/Documents/advanced-custom-fields-"
+"relationship-mime-filter\n"
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/admin/class-acf-rmf-admin.php:71
+msgid "All"
+msgstr ""
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/admin/class-acf-rmf-admin.php:79
+msgid "MIME types"
+msgstr ""
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/admin/class-acf-rmf-admin.php:80
+msgid "Specify mime type."
+msgstr ""
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/includes/class-acf-rmf.php:163
+msgid ""
+"Sorry, \"Advanced Custom Fields - Relationship MIME type filter\" plugin "
+"requires the"
+msgstr ""
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/includes/class-acf-rmf.php:163
+msgid "ACF Plugin"
+msgstr ""
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/includes/class-acf-rmf.php:163
+msgid "to be installed and active."
+msgstr ""
+
+#: /home/rahul/Documents/advanced-custom-fields-relationship-mime-filter/includes/class-acf-rmf.php:163
+msgid "Install ACF Plugin"
+msgstr ""

@@ -101,11 +101,34 @@ class Acf_Rmf {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-acf-rmf-loader.php';
 
 		/**
+		 * The class responsible for defining internationalization functionality
+		 * of the plugin.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-acf-rmf-i18n.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-acf-rmf-admin.php';
 
 		$this->loader = new Acf_Rmf_Loader();
+
+	}
+
+	/**
+	 * Define the locale for this plugin for internationalization.
+	 *
+	 * Uses the Plugin_Name_i18n class in order to set the domain and to register the hook
+	 * with WordPress.
+	 *
+	 * @since    1.0.0
+	 * @access   private
+	 */
+	private function set_locale() {
+
+		$plugin_i18n = new Acf_Rmf_i18n();
+
+		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
 	}
 
@@ -137,7 +160,7 @@ class Acf_Rmf {
 	 * @access   private
 	 */
 	public function acf_rmf_plugin_notice() {
-		echo '<div class="error"><p>' . __( 'Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the', 'acf' ) . '<a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">' . __( 'ACF Plugin', 'acf' ) . '</a>' . __( 'to be installed and active.', 'acf' ) . '<br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">' . __( 'Install ACF Plugin', 'acf' ) . '</a></p></div>';
+		echo '<div class="error"><p>' . __( 'Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the', 'acf-rmf' ) . '<a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">' . __( 'ACF Plugin', 'acf-rmf' ) . '</a>' . __( 'to be installed and active.', 'acf-rmf' ) . '<br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">' . __( 'Install ACF Plugin', 'acf-rmf' ) . '</a></p></div>';
 	}
 
 	/**
