@@ -37,6 +37,11 @@ If this plugin helps you, please give it a good rating. If you have any problems
 
 3. You can select multiple mime types to filter post list in relation ship metabox.
 
+== Screenshots ==
+
+1. After activating this add-on you can see mime type filter in relationship field of acf.
+
+2. You will see list of attachment which has mime types( i.e image/jpeg ) from specified in acf filter.
 
 == Changelog ==
 

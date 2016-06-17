@@ -2,7 +2,7 @@
 
   Version:  1.0.0
 
-* **Author:** [Rahul Prajapati](http://rahulprajapati.me)
+* **Author:** [Rahul Prajapati](https://profiles.wordpress.org/rahulsprajapati/profile/)
 
 * **License:** [GPL v2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 

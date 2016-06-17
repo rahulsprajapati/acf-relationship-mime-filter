@@ -6,7 +6,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Advanced Custom Fields - Relationship MIME type filter
- * Plugin URI:        https://profiles.wordpress.org/rahulsprajapati/profile/
+ * Plugin URI:        https://wordpress.org/plugins/advanced-custom-fields-relationship-mime-filter
  * Description:       This plugin is an add-on for Advanced Custom Fields. It allows you to use "post_mime_type" filter in "relationship" field.
  * Version:           1.0.0
  * Author:            Rahul Prajapati

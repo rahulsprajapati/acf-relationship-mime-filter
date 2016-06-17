@@ -144,7 +144,7 @@ class Acf_Rmf {
 
 			add_action( 'admin_notices', array( $this, 'acf_rmf_plugin_notice' ) );
 
-			deactivate_plugins( plugin_dir_path( dirname( __FILE__ ) ) . 'acf-relationship-mime-filter.php' );
+			deactivate_plugins( plugin_dir_path( dirname( __FILE__ ) ) . 'acf-rmf.php' );
 
 			if ( isset( $_GET['activate'] ) ) {
 				unset( $_GET['activate'] );
@@ -160,7 +160,7 @@ class Acf_Rmf {
 	 * @access   private
 	 */
 	public function acf_rmf_plugin_notice() {
-		echo '<div class="error"><p>' . __( 'Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the', 'acf-rmf' ) . '<a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">' . __( 'ACF Plugin', 'acf-rmf' ) . '</a>' . __( 'to be installed and active.', 'acf-rmf' ) . '<br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">' . __( 'Install ACF Plugin', 'acf-rmf' ) . '</a></p></div>';
+		echo '<div class="error"><p>' . __( 'Sorry, "Advanced Custom Fields - Relationship MIME type filter" plugin requires the ', 'acf-rmf' ) . '<a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank" title="Advance Custom Field">' . __( 'ACF Plugin', 'acf-rmf' ) . '</a>' . __( ' to be installed and active.', 'acf-rmf' ) . '<br><a href="' . admin_url( 'plugin-install.php?tab=search&s=Advanced+Custom+Fields' ) . '">' . __( 'Install ACF Plugin', 'acf-rmf' ) . '</a></p></div>';
 	}
 
 	/**
