@@ -54,15 +54,19 @@ class Acf_Rmf_Admin {
 
 		add_action( 'acf/create_field_options/type=relationship', array( $this, 'acf_rmf_create_options' ), 11, 1 );
 
-		add_filter( 'acf/fields/relationship/query', array( $this, 'acf_rmf_query_post_args' ), 10, 3 );
+		add_filter( 'acf/fields/relationship/query', array( $this, 'acf_rmf_query_post_args' ), 10, 2 );
 	}
 
 	/**
 	 * callback function for action "acf/create_field_options/type=relationship"
 	 *
+	 * Create extra options for your field. This is rendered when editing a field.
+	 * The value of $field['name'] can be used (like bellow) to save extra data to the $field
 	 * Adding mime type filter option in ACF relationship field
 	 *
 	 * @since    1.0.0
+	 *
+	 * @param	$field	- an array holding all the field's data
 	 */
 	public function acf_rmf_create_options( $field ) {
 		$all_mimes = get_allowed_mime_types();
@@ -100,8 +104,13 @@ class Acf_Rmf_Admin {
 	 * Add "post_mime_type" property in WP_Query args if mime types are selected.
 	 *
 	 * @since    1.0.0
+	 *
+	 * @param $options  WP_Query args
+	 * @param $field    ACF field types
+	 *
+	 * @return mixed $options	- the modified options
 	 */
-	public function acf_rmf_query_post_args( $options, $field, $the_post ) {
+	public function acf_rmf_query_post_args( $options, $field ) {
 		if ( 'attachment' == $options['post_type'] ) {
 			if ( ! empty( $field['post_mime_type'] ) ) {
 				$mime_type = $field['post_mime_type'];

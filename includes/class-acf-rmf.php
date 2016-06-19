@@ -72,6 +72,7 @@ class Acf_Rmf {
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
+		$this->set_locale();
 		$this->define_admin_hooks();
 
 	}
