@@ -1,5 +1,6 @@
 # ACF - Relationship MIME type filter #
 
+[![Build Status](https://travis-ci.org/rahulsprajapati/acf-relationship-mime-filter.svg?branch=master)](https://travis-ci.org/rahulsprajapati/acf-relationship-mime-filter)
 [![Scrutinizer Build](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/)
 [![Scrutinizer Build](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/)
 
