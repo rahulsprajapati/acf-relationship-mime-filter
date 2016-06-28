@@ -1,9 +1,9 @@
-=== Advanced Custom Fields - Relationship MIME type filter ===
+=== ACF - Relationship MIME type filter ===
 Contributors: rahulsprjapati
 Donate link:
 Tags: advanced custom fields, admin, advanced, custom, custom field, edit, mime filter, relationship, image, post type, attachment, acf
-Requires at least: 1.0.0
-Tested up to: 1.0.0
+Requires at least: WordPress 3.5.0
+Tested up to: WordPress 4.5.3
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -20,9 +20,9 @@ If this plugin helps you, please give it a good rating. If you have any problems
 
 == Installation ==
 1. Download Plugin.
-   [Download](https://downloads.wordpress.org/plugin/advanced-custom-fields-relationship-mime-filter.1.0.0.zip "Download")
+   [Download](https://downloads.wordpress.org/plugin/acf-relationship-mime-filter.1.0.0.zip "Download")
 
-2. Install "advanced-custom-fields-relationship-mime-filter" plugin from the 'Plugins' section in your dashboard (Plugins > Add New > Upload Plugin -> Select Plugin Zip File From Downloaded Location).
+2. Install "acf-relationship-mime-filter" plugin from the 'Plugins' section in your dashboard (Plugins > Add New > Upload Plugin -> Select Plugin Zip File From Downloaded Location).
 
 3. Alternatively you can Unzip it and upload it to the plugins folder of your WordPress installation (wp-content/plugins/ directory of your WordPress installation).
 
