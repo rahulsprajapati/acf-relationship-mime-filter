@@ -9,7 +9,6 @@ cd "$( dirname $0 )"
 dev_lib_dir=$(pwd)
 cd ..
 
-
 if [ -e .dev-lib ]; then
 	source .dev-lib
 elif [ -e .ci-env.sh ]; then
