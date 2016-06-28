@@ -48,3 +48,6 @@ If this plugin helps you, please give it a good rating. If you have any problems
 = 1.0.1 =
 * Added "post_mime_type" filter in "relationship" field.
 
+= 1.0.0 =
+* Added "post_mime_type" filter in "relationship" field.
+
