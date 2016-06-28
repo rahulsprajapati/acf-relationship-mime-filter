@@ -1,5 +1,8 @@
 # ACF - Relationship MIME type filter #
 
+[![Scrutinizer Build](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/)
+[![Scrutinizer Build](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/)
+
   Version:  1.0.0
 
 * **Author:** [Rahul Prajapati](https://profiles.wordpress.org/rahulsprajapati/profile/)
