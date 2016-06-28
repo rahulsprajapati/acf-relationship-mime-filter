@@ -4,7 +4,7 @@
 [![Scrutinizer Build](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/)
 [![Scrutinizer Build](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rahulsprajapati/acf-relationship-mime-filter/)
 
-  Version:  1.0.1
+  Version:  1.0.0
 
 * **Author:** [Rahul Prajapati](https://profiles.wordpress.org/rahulsprajapati/profile/)
 
@@ -15,7 +15,7 @@
 	
 ## Installation ##
 1. Download Plugin.
-   [Download](https://downloads.wordpress.org/plugin/acf-relationship-mime-filter.1.0.1.zip "Download")
+   [Download](https://downloads.wordpress.org/plugin/acf-relationship-mime-filter.1.0.0.zip "Download")
 
 2. Install "acf-relationship-mime-filter" plugin from the 'Plugins' section in your dashboard (Plugins > Add New > Upload Plugin -> Select Plugin Zip File From Downloaded Location).
 
