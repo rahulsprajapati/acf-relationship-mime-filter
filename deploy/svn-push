@@ -137,7 +137,7 @@ rsync -avz --delete --delete-excluded \
 	--exclude '/.mailmap' \
 	--exclude '/.travis.yml' \
 	--exclude '/assets' \
-	--exclude '/dev-lib' \
+	--exclude '/deploy' \
 	--exclude '/svn-url' \
 	--exclude '/tests' \
 	--exclude 'phpunit.xml*' \
