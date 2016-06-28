@@ -7,7 +7,7 @@ This plugin is an add-on for Advanced Custom Fields. It allows you to use "post_
 **Tags:** [advanced custom fields](https://wordpress.org/plugins/tags/advanced custom fields), [admin](https://wordpress.org/plugins/tags/admin), [advanced](https://wordpress.org/plugins/tags/advanced), [custom](https://wordpress.org/plugins/tags/custom), [custom field](https://wordpress.org/plugins/tags/custom field), [edit](https://wordpress.org/plugins/tags/edit), [mime filter](https://wordpress.org/plugins/tags/mime filter), [relationship](https://wordpress.org/plugins/tags/relationship), [image](https://wordpress.org/plugins/tags/image), [post type](https://wordpress.org/plugins/tags/post type), [attachment](https://wordpress.org/plugins/tags/attachment), [acf](https://wordpress.org/plugins/tags/acf)  
 **Requires at least:** WordPress 3.5.0  
 **Tested up to:** WordPress 4.5.3  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.0.1  
 **License:** [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)  
 **Donate link:** https://profiles.wordpress.org/rahulsprajapati/profile/  
 
