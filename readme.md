@@ -23,7 +23,7 @@ If this plugin helps you, please give it a good rating. If you have any problems
 ## Installation ##
 
 1. Download Plugin.
-   [Download](https://downloads.wordpress.org/plugin/acf-relationship-mime-filter.1.0.0.zip "Download")
+   [Download](https://downloads.wordpress.org/plugin/acf-relationship-mime-filter.1.0.1.zip "Download")
 
 2. Install "acf-relationship-mime-filter" plugin from the 'Plugins' section in your dashboard (Plugins > Add New > Upload Plugin -> Select Plugin Zip File From Downloaded Location).
 
@@ -53,7 +53,7 @@ If this plugin helps you, please give it a good rating. If you have any problems
 
 ## Changelog ##
 
-### 1.0 ###
+### 1.0.1 ###
 * Added "post_mime_type" filter in "relationship" field.
 
 
