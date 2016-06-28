@@ -22,13 +22,13 @@ matrix:
 
 before_script:
     - export DEV_LIB_PATH=dev-lib
-    - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
+    - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) )/deploy; fi
     - source $DEV_LIB_PATH/travis.before_script.sh
 
 script:
-    - $DEV_LIB_PATH/deploy/travis.script.sh
+    - $DEV_LIB_PATH/travis.script.sh
 
 after_script:
-    - $DEV_LIB_PATH/deploy/travis.after_script.sh
+    - $DEV_LIB_PATH/travis.after_script.sh
 
 script: phpunit
