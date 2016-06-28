@@ -3,7 +3,7 @@
 
 This plugin is an add-on for Advanced Custom Fields. It allows you to use "post_mime_type" filter in "relationship" field.
 
-**Contributors:** [rahulsprjapati](https://profiles.wordpress.org/rahulsprjapati)  
+**Contributors:** [rahulsprajapati](https://profiles.wordpress.org/rahulsprajapati)  
 **Tags:** [advanced custom fields](https://wordpress.org/plugins/tags/advanced custom fields), [admin](https://wordpress.org/plugins/tags/admin), [advanced](https://wordpress.org/plugins/tags/advanced), [custom](https://wordpress.org/plugins/tags/custom), [custom field](https://wordpress.org/plugins/tags/custom field), [edit](https://wordpress.org/plugins/tags/edit), [mime filter](https://wordpress.org/plugins/tags/mime filter), [relationship](https://wordpress.org/plugins/tags/relationship), [image](https://wordpress.org/plugins/tags/image), [post type](https://wordpress.org/plugins/tags/post type), [attachment](https://wordpress.org/plugins/tags/attachment), [acf](https://wordpress.org/plugins/tags/acf)  
 **Requires at least:** WordPress 3.5.0  
 **Tested up to:** WordPress 4.5.3  
