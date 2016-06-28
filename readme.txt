@@ -1,6 +1,6 @@
 === ACF - Relationship MIME type filter ===
 Contributors: rahulsprjapati
-Donate link:
+Donate link: https://profiles.wordpress.org/rahulsprajapati/profile/
 Tags: advanced custom fields, admin, advanced, custom, custom field, edit, mime filter, relationship, image, post type, attachment, acf
 Requires at least: WordPress 3.5.0
 Tested up to: WordPress 4.5.3
